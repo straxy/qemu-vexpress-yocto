@@ -14,29 +14,7 @@ script_dir=$(readlink -f "$script_dir")
 
 base_dir=${script_dir}/sources/base
 
-build_dir=${script_dir}/build
-
-target=""
-
-targets=("qemu")
-
-for i in ${targets[@]}
-do
-    if [[ $i == $1 ]]
-    then
-        target=$1
-        break
-    fi
-done
-
-if [ -z "${target}" ]; then
-    echo "Sorry, it does not seem that *$1* is a valid target"
-    echo ""
-
-    printf "Supported targets are:\n"
-    printf '%s\n' "${targets[@]}"
-    return 1
-fi
+build_dir=${script_dir}/$1
 
 . ${script_dir}/sources/poky/oe-init-build-env ${build_dir}
 
@@ -46,6 +24,11 @@ fi
 
 # Board specific entries
 cp ${base_dir}/templates/bblayers.conf.sample ${build_dir}/conf/bblayers.conf
+cat >> ${build_dir}/conf/local.conf <<EOF
+DL_DIR = "\${TOPDIR}/../downloads/"
+SSTATE_DIR = "\${TOPDIR}/../sstate-cache/"
+EOF
 cat ${base_dir}/templates/local.conf.append >> ${build_dir}/conf/local.conf
 
 touch ${build_dir}/conf/append_complete
+
