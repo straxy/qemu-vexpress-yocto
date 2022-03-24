@@ -12,11 +12,13 @@ INSTRUCTIONS
 
 2) Setup environment
 
-`source setup-environment qemu`
+`source setup-environment build_fb`
 
 3) Start build
 
-`MACHINE=vexpress-qemu bitbake core-image-test`
+`DISTRO=mistra-framebuffer MACHINE=vexpress-qemu bitbake core-image-test`
+
+NOTE: Other available distro is `mistra-x11`.
 
 Output image is in `./tmp/deploy/images/vexpress-qemu`.
 
