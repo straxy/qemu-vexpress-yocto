@@ -12,5 +12,6 @@
     <copyfile dest="setup-environment" src="scripts/setup-environment"/>
   </project>
   <project name="meta-vexpress" remote="vexpress" revision="main" path="sources/meta-vexpress"/>
+  <project name="meta-vexpress-apps" remote="vexpress" revision="main" path="sources/meta-vexpress-apps"/>
 
   </manifest>
