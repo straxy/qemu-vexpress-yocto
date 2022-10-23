@@ -8,10 +8,10 @@
 
   <project name="poky" remote="yocto" revision="dunfell" path="sources/poky"/>
   <project name="meta-openembedded" remote="oe" revision="dunfell" path="sources/meta-openembedded"/>
-  <project name="qemu-vexpress-yocto" remote="vexpress" revision="main" path="sources/base">
+  <project name="qemu-vexpress-yocto" remote="vexpress" revision="dunfell" path="sources/base">
     <copyfile dest="setup-environment" src="scripts/setup-environment"/>
   </project>
-  <project name="meta-vexpress" remote="vexpress" revision="main" path="sources/meta-vexpress"/>
-  <project name="meta-vexpress-apps" remote="vexpress" revision="main" path="sources/meta-vexpress-apps"/>
+  <project name="meta-vexpress" remote="vexpress" revision="dunfell" path="sources/meta-vexpress"/>
+  <project name="meta-vexpress-apps" remote="vexpress" revision="dunfell" path="sources/meta-vexpress-apps"/>
 
   </manifest>
