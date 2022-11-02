@@ -5,9 +5,11 @@
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="https://github.com/straxy" name="vexpress"/>
   <remote fetch="https://github.com/openembedded" name="oe"/>
+  <remote fetch="git://code.qt.io/yocto" name="qt6"/>
 
   <project name="poky" remote="yocto" revision="kirkstone" path="sources/poky"/>
   <project name="meta-openembedded" remote="oe" revision="kirkstone" path="sources/meta-openembedded"/>
+  <project name="meta-qt6" remote="qt6" revision="6.4" path="sources/meta-qt6"/>
   <project name="qemu-vexpress-yocto" remote="vexpress" revision="kirkstone" path="sources/base">
     <copyfile dest="setup-environment" src="scripts/setup-environment"/>
   </project>
