@@ -12,5 +12,6 @@ BBLAYERS ?= " \
   ${TOPDIR}/../sources/meta-openembedded/meta-oe \
   ${TOPDIR}/../sources/meta-qt6 \
   ${TOPDIR}/../sources/meta-vexpress \
-  ${TOPDIR}/../sources/meta-vexpress-apps \
+  ${TOPDIR}/../sources/meta-mistra-base \
+  ${TOPDIR}/../sources/meta-mistra-apps \
 "

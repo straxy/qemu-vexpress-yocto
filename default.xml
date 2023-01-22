@@ -14,6 +14,7 @@
     <copyfile dest="setup-environment" src="scripts/setup-environment"/>
   </project>
   <project name="meta-vexpress" remote="vexpress" revision="kirkstone" path="sources/meta-vexpress"/>
-  <project name="meta-vexpress-apps" remote="vexpress" revision="kirkstone" path="sources/meta-vexpress-apps"/>
+  <project name="meta-mistra-base" remote="vexpress" revision="kirkstone" path="sources/meta-mistra-base"/>
+  <project name="meta-mistra-apps" remote="vexpress" revision="kirkstone" path="sources/meta-mistra-apps"/>
 
   </manifest>
